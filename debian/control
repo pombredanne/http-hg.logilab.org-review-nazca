@@ -19,7 +19,8 @@ Depends:
 Recommends:
   python-nltk (>= 3.0),
   python-sparqlwrapper,
-  python-dateutil
+  python-dateutil,
+  w3c-dtd-xhtml,
 Description: Python library for data alignment.
  Nazca is a python library that provides a set of alignment helpers
  .
