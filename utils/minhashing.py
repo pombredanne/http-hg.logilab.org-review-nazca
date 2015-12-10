@@ -153,9 +153,9 @@ class Minlsh(object):
         while rows:
             doc = rows.pop(0)
             #Concatenate the needed rows.
-            tmp = np.dstack([hashvalues[:, r] for r in doc])
+            tmp = hashvalues[:,doc]
             #Take the mininum of hashes
-            sig[:, docind] = np.min(tmp[0], 1)
+            sig[:, docind] = np.min(tmp, 1)
             docind += 1
             if self._verbose and docind % 50000 == 0:
                 print (docind * 100) / nrows
